@@ -1,20 +1,37 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   background-color: hsl(235, 21%, 11%);
+  height: 100%;
+  overflow-x: hidden;
+  
+}
+
+.light{
+    --top-img: url(./images/bg-desktop-light.jpg)
+}
+
+img {
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 .top-img {
   background-image: url(./images/bg-desktop-dark.jpg);
-  background-repeat: no-repeat;
-  width: 100%;
+  background-image: var(--top-img);
   margin-top: -10px;
   margin-left: -10px;
   margin-right: -10px;
 }
 
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -86%);
+}
+
 .header {
   display: flex;
-  grid-template-columns: 2fr 1fr;
   color: white;
   align-items: center;
   justify-content: space-between;
@@ -29,23 +46,31 @@ h1 {
   letter-spacing: 5px;
 }
 
-.toggle-btn {
-  background-image: url(./images/icon-sun.svg);
+.header img {
   width: 25px;
-  height: 25px;
 }
 
-input:focus{
-    border: none;
+input:focus {
+  border: none;
 }
-#todo-input {
+
+.heading {
+  position: relative;
+}
+
+.todo{
+    display: flex;
+}
+
+
+.todo-input {
   background: hsl(235, 24%, 19%);
   width: 35%;
   height: 70px;
   border: none;
   margin-left: 490px;
   margin-right: 200px;
-  margin-top: 30px;
+  margin-top: 35px;
   display: grid;
   grid-template-columns: 10% auto;
   align-items: center;
@@ -54,6 +79,18 @@ input:focus{
   font-size: 20px;
   padding-left: 70px;
 }
+
+.circle{
+    margin-top: 3%;
+    margin-left: 27%;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    cursor: pointer;
+}
+
 
 .attribution {
   font-size: 11px;

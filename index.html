@@ -12,6 +12,7 @@
   <title>Frontend Mentor | Todo app</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="./script.ts"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
@@ -19,18 +20,24 @@
 
 <body>
 
+
   <main>
-    <div class="top-img">
+    <img src="./images/bg-desktop-dark.jpg" alt="">
+
+    <div class="heading">
       <div class="header">
         <h1>todo</h1>
-        <div class="toggle-btn"></div>
+        <img src="./images/icon-sun.svg" onclick="changeTheme()" id="toogle-btn" alt="">
       </div>
-      <div class="user-input">
+      <div class="todo">
         <div class="circle"></div>
-        <input type="text" id="todo-input" placeholder="Create a new todo..">
+        <input type="text" name="name" class="todo-input" placeholder="Create a new todo..">
+        <input type="submit" name="submit" style="position: absolute; left: -9999px">
       </div>
-
     </div>
+
+
+
   </main>
 
 
