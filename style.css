@@ -1,6 +1,11 @@
 body {
   background-color: hsl(235, 21%, 11%);
   overflow-x: hidden;
+  --bg: hsl(235, 21%, 11%);
+  --fg: hsl(234, 39%, 85%);
+  --background: url("./images/bg-desktop-light.jpg");
+  --tgl-btn: url("./images/bg-icon-moon.svg")
+  
 }
 
 main {
@@ -49,8 +54,6 @@ h1 {
     margin-left: 32%;
     width: 25;
     height: 25px;
-    display: grid;
-    grid-template-columns: 10% auto;
     align-items: center;
     border: 1px solid hsl(234, 11%, 52%);
     
@@ -79,21 +82,3 @@ h1 {
     position: absolute;
     cursor: pointer;
 }
-
-/*
-.todo-input {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: hsl(235, 24%, 19%);
-    width: 35%;
-    border: none;
-    display: flex;
-    grid-template-columns: 10% auto;
-    align-items: center;
-    border-radius: 5px;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 20px;
-  }
-  */
