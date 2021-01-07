@@ -7,7 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
 
   <title>Frontend Mentor | Todo app</title>
 
@@ -19,18 +21,20 @@
 </head>
 <body>
   <main>
-    <img src="./images/bg-desktop-dark.jpg" class="img-fluid background" alt="">
+  <!-- <img src="./images/bg-desktop-dark.jpg" class="img-fluid background" alt=""> --> 
+    <div class="img-fluid background">
 
+    </div>
     <div class="container-fluid">
       <div class="header d-flex justify-content-around">
         <h1 class="d-flex flex-row md-3">
           todo
         </h1>
-        <img src="./images/icon-sun.svg" class="toggle d-flex flex-row md-1" alt="">
+        <div class="toggle d-flex flex-row md-1" onclick="changeTheme()"></div>
         
       </div>
       <div>
-        <form class="d-flex type-todo">
+        <form class="type-todo">
           <div class="circle"></div>
           <input type="text" name="user-input" class="todo-input" placeholder="Create a new todo..">
         </form>
