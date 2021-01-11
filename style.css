@@ -1,64 +1,97 @@
 body {
-  font-family: "Josefin Sans", sans-serif;
   background-color: hsl(235, 21%, 11%);
+  overflow-x: hidden;
+  --bg: hsl(235, 21%, 11%);
+  --fg: hsl(234, 39%, 85%);
+  --background: url(./images/bg-desktop-dark.jpg);
+  --tgl-btn: url(./images/icon-sun.svg);
+
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.top-img {
-  background-image: url(./images/bg-desktop-dark.jpg);
+.light {
+  --background: url(./images/bg-desktop-light.jpg);
+  --tgl-btn: url(./images/icon-moon.svg);
+  --bg: hsl(236, 33%, 92%);
+  --fg: hsl(237, 14%, 26%);
+}
+
+main {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.background {
+  background: var(--background);
   background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+img {
   width: 100%;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-right: -10px;
 }
 
 .header {
+  position: relative;
   display: flex;
-  grid-template-columns: 2fr 1fr;
-  color: white;
-  align-items: center;
   justify-content: space-between;
-  padding-top: 150px;
-  padding-left: 30em;
-  padding-right: 42em;
+  align-items: center;
+  /* margin-left: 20%; */
+  /* margin-right: 20%; */
+  margin-top: -70px;
+  padding-bottom: 5%;
 }
 
 h1 {
-  text-transform: uppercase;
-  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 5px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  margin-bottom: -10px;
 }
 
-.toggle-btn {
-  background-image: url(./images/icon-sun.svg);
+.toggle {
+  background-image: var(--tgl-btn);
+  background-size: cover;
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 
-input:focus{
-    border: none;
+.type-todo {
+  display: flex;
+  margin-left: 32%;
+  width: 25;
+  height: 25px;
+  align-items: center;
 }
-#todo-input {
-  background: hsl(235, 24%, 19%);
-  width: 35%;
-  height: 70px;
-  border: none;
-  margin-left: 490px;
-  margin-right: 200px;
-  margin-top: 30px;
-  display: grid;
+
+.todo-input {
+  background-color: var(--bg);
+  margin-left: 1%;
+  width: 51%;
+  height: 50px;
+  display: flex;
   grid-template-columns: 10% auto;
   align-items: center;
+  border: none;
   border-radius: 5px;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
-  padding-left: 70px;
+  text-align: center;
+  caret-color: hsl(220, 98%, 61%);
+  text-transform: var(--bg);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.circle {
+  height: 24px;
+  width: 24px;
+  margin-left: 2%;
+  border-radius: 50%;
+  border: 1px solid var(--fg);
+  position: absolute;
+  cursor: pointer;
 }
